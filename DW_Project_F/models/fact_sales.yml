@@ -1,0 +1,16 @@
+version: 2
+ 
+models:
+  - name: fact_sales
+    description: Periodic Snapshot fact table. One row per line item sold.
+    columns:
+      - name: orderdatekey
+        description: Dimension FK for dim_date
+      - name: productkey
+        description: Dimension FK for dim_product
+      - name: quantity
+        description: the quantity of the product on the order. Additive
+      - name: total_amount
+        description: additive fact for quantity * product retail price
+      - name: unit_price
+        description: additive fact for unit product price
