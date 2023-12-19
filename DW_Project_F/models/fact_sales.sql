@@ -28,8 +28,7 @@ select
     od.quantity,
     p.product_wholesale_price as unit_price,
     p.product_wholesale_price * od.quantity as total_amount,
-    o.orderdatekey,
-    od.order_id
+    o.orderdatekey
 from stg_products p
 join stg_order_details od on p.product_id = od.product_id
 join stg_orders o on o.order_id = od.order_id

@@ -14,8 +14,7 @@ SELECT
     d_product.*,
     f.quantity,
     f.total_amount,
-    f.unit_price,
-    f.order_id
+    f.unit_price
 FROM f_sales AS f
 LEFT JOIN d_date ON f.orderdatekey = d_date.datekey
 LEFT JOIN d_product ON f.productkey = d_product.productkey
