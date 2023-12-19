@@ -34,4 +34,4 @@ sources:
             tests:
               - unique
 
-      - name: order_details
+      - name: OrderDetails
