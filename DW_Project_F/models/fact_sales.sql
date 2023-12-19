@@ -19,7 +19,7 @@ with
             order_id,
             product_id,
             sum(quantity) as quantity
-        from {{ source("fudgemart_v3", "order_details") }}
+        from {{ source("fudgemart_v3", "OrderDetails") }}
         group by order_id, product_id
     )
  
