@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: conformed
+    database: raw
+    schema: conformed
+
+    tables:
+      - name: DateDimension
+        columns:
+          - name: DateKey
+            tests:
+              - unique
+
+  - name: fudgemart_v3
+    database: raw
+    schema: fudgemart_v3
+
+    tables:
+      - name: Customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+      - name: Orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+
+      - name: Products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+
+      - name: order_details
